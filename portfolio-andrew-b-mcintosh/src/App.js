@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { blue, indigo } from '@material-ui/core/colors'
-import Routes from './Routes';
-
-
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { blue, indigo } from "@material-ui/core/colors";
+import Routes from "./Routes";
 
 const theme = createMuiTheme({
   palette: {
@@ -18,10 +16,7 @@ const theme = createMuiTheme({
   },
   typography: {
     // Use the system font instead of the default Roboto font.
-    fontFamily: [
-      '"Lato"',
-      'sans-serif'
-    ].join(',')
+    fontFamily: ['"Lato"', "sans-serif"].join(",")
   }
 });
 
@@ -29,9 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <MuiThemeProvider theme={theme}>
-        <Routes />
-      </MuiThemeProvider>
+        <MuiThemeProvider theme={theme}>
+          <Routes />
+        </MuiThemeProvider>
       </div>
     );
   }

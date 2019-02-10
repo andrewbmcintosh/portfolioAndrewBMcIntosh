@@ -1,19 +1,17 @@
-import React, { Component } from 'react'
-import { Route, HashRouter, Switch } from 'react-router-dom'
-import Main from './components/Main';
-
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Main from "./components/Main";
 
 export class Routes extends Component {
   render() {
     return (
-      <HashRouter>
+      <Router>
         <Switch>
-            <Route exact path='/' component={ Main } />
+          <Route exact path="/" component={Main} />
         </Switch>
-
-      </HashRouter>
-    )
+      </Router>
+    );
   }
 }
 
-export default Routes
+export default Routes;
