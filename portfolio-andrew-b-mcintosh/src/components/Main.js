@@ -17,15 +17,18 @@ const styles = theme => ({
   },
   containerc: {
     display: "grid",
+    padding: "auto",
     gridTemplateColumns: "repeat(12, 1fr)",
     gridGap: `${theme.spacing.unit * 3}px`,
+    alignItems: 'center',
+    alignContent: 'center',
   },
   paper: {
     padding: theme.spacing.unit,
     textAlign: "center",
     color: theme.palette.text.secondary,
     whiteSpace: "nowrap",
-    marginBottom: theme.spacing.unit
+    marginBottom: theme.spacing.unit,
   },
   divider: {
     margin: `${theme.spacing.unit * 2}px 0`
@@ -46,6 +49,9 @@ export class Main extends Component {
           </div>
           <div style={{ gridColumnEnd: "span 12"}}>
           <div className={classes.containerc}>
+          <div style={{ gridColumnEnd: "span 3" }}>
+            <Paper className={classes.paper}>xs=3d</Paper>
+          </div>
           <div style={{ gridColumnEnd: "span 3" }}>
             <Paper className={classes.paper}>xs=3A</Paper>
           </div>
