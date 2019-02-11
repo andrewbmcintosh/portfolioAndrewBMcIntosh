@@ -3,19 +3,34 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import { TopNavBar } from "./TopNavBar/TopNavBar";
 
 const styles = theme => ({
   container: {
     display: "grid",
     gridTemplateColumns: "repeat(12, 1fr)",
-    gridGap: `${theme.spacing.unit * 3}px`
+    gridTemplateRows: "repeat(28, 1fr)",
+    // gridGap: `${theme.spacing.unit * 3}px`
+  },
+  navbar:{
+    gridColumnStart: "1",
+    gridColumnEnd: "13",
+    gridRowStart: "1",
+    gridRowEnd: "2"
+  }, 
+  landingSection: {
+    gridColumnStart: "1",
+    gridColumnEnd: "13",
+    gridRowStart: "2",
+    gridRowEnd: "14"
   },
   containerB: {
     display: "grid",
     gridTemplateColumns: "(12, 1fr)",
     gridGap: `${theme.spacing.unit * 3}px`
   },
-  containerc: {
+ 
+  containerC: {
     display: "grid",
     padding: "auto",
     gridTemplateColumns: "repeat(12, 1fr)",
@@ -42,24 +57,26 @@ export class Main extends Component {
     return (
       <React.Fragment>
         <CssBaseline />
-        <p>this is the MAIN PAGE</p>
         <div className={classes.container}>
-          <div style={{ gridColumnEnd: "span 12" }}>
-            <Paper className={classes.paper}>xs=12</Paper>
+          <div className={classes.navbar}>
+          <TopNavBar />
+          </div>
+          <div className={classes.landingSection}>
+            
           </div>
           <div style={{ gridColumnEnd: "span 12"}}>
           <div className={classes.containerc}>
-          <div style={{ gridColumnEnd: "span 3" }}>
-            <Paper className={classes.paper}>xs=3d</Paper>
+          <div style={{ gridColumnEnd: "span 2" }}>
+            {/* <Paper className={classes.paper}>xs=2d</Paper> */}
           </div>
-          <div style={{ gridColumnEnd: "span 3" }}>
-            <Paper className={classes.paper}>xs=3A</Paper>
+          <div style={{ gridColumnEnd: "span 4" }}>
+            <Paper className={classes.paper}>xs=4A</Paper>
           </div>
-          <div style={{ gridColumnEnd: "span 3" }}>
-            <Paper className={classes.paper}>xs=3B</Paper>
+          <div style={{ gridColumnEnd: "span 4" }}>
+            <Paper className={classes.paper}>xs=4B</Paper>
           </div>
-          <div style={{ gridColumnEnd: "span 3" }}>
-            <Paper className={classes.paper}>xs=3C</Paper>
+          <div style={{ gridColumnEnd: "span 2" }}>
+            {/* <Paper className={classes.paper}>xs=2C</Paper> */}
           </div>
           </div>
           </div>
