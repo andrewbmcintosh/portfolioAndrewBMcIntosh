@@ -60,6 +60,7 @@ export class Main extends Component {
         <div className={classes.container}>
           <div className={classes.navbar}>
           <TopNavBar />
+          {/* need to create links */}
           </div>
           <div className={classes.landingSection}>
             
