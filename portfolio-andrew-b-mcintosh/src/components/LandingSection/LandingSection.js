@@ -38,8 +38,7 @@ export class LandingSection extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.container}>
-      
-        
+      <p>Landing Section</p>
       </div>
     )
   }
