@@ -8,8 +8,8 @@ const CardDiv = styled.div`
   background-color: white;
 
   justify: top;
-  width: 547px;
-  height: 333px;
+  width: 417px;
+  height: 200px;
   shadow: 5;
   z-index: -1;
 `;
@@ -25,17 +25,27 @@ const BlueDiv = styled.div`
   z-index: 1;
 `;
 
+const StyledDiv = styled.div`
+  padding-top: 130px;
+  position: absolute;
+  margin-left: auto;
+  right: 5%;
+  left: auto;
+`;
+
 export class FloatingCard extends Component {
   render() {
     return (
-      <Container>
+      <StyledDiv>
         <BlueDiv>
           <p>Andrew</p>
         </BlueDiv>
         <CardDiv>
-          <h1>Hello</h1>
+          <Container>
+            <h1>Hello</h1>
+          </Container>
         </CardDiv>
-      </Container>
+      </StyledDiv>
     );
   }
 }

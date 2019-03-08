@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import styled from 'styled-components';
 import FloatingCard from './FloatingCard';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const StyledJumbotron = styled(Jumbotron)`
   background-color: red;
@@ -21,9 +24,6 @@ export class LandingPage extends Component {
           <p>hey</p>
           <FloatingCard />
         </StyledJumbotron>
-        <div>
-          <h1>Andrew McIntosh</h1>
-        </div>
       </LandingDiv>
     );
   }
