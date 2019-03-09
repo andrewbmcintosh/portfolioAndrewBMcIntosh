@@ -27,7 +27,7 @@ const LandingDiv = styled.div`
   grid-template-rows: 5% 5% 5% 5% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
   background-color: #91b7bd;
-  height: 1464px;
+  height: 110%;
 `;
 
 const CardContainer = styled.div`
@@ -46,7 +46,7 @@ const Title = styled.p`
 const SkillsContainer = styled.div`
   display: grid;
   grid-column: 2/12;
-  grid-row: 6/13;
+  grid-row: 6/12;
 `;
 
 // const StyledNavbar = styled.div`

@@ -5,7 +5,7 @@ import icon from '../../media/icon.png';
 const SkillsSectionContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 200px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 `;
 
 const SingleSkillContainer = styled.div`
@@ -29,7 +29,7 @@ const SummaryText = styled.p`
   font-size: 1.4rem;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-
+  padding: 1rem 0 4rem 0;
   text-align: center;
   vertical-align: middle;
   display: inline-block;
@@ -61,8 +61,8 @@ const SkillImage = styled.div`
   ${'' /* background-image: url(${icon}); */}
   background-size: cover;
   grid-row: 1;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border: 1px solid blue;
 `;
 
