@@ -68,7 +68,7 @@ const ProjectBtn = styled.button`
   color: white;
 `;
 
-export class ProjectCard extends Component {
+export class ProjectCardTwo extends Component {
   render() {
     return (
       <ProjectCardContainer>
@@ -82,4 +82,4 @@ export class ProjectCard extends Component {
   }
 }
 
-export default ProjectCard;
+export default ProjectCardTwo;
