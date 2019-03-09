@@ -9,7 +9,14 @@ import Col from 'react-bootstrap/Col';
 const StyledJumbotron = styled.div`
   grid-column: 1/13;
   grid-row: 1/5;
-  background-color: red;
+  background-image: url('https://i.imgur.com/zft283x.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: start;
+
+  position: bottom;
+  z-index: 0;
 `;
 
 const LandingDiv = styled.div`
@@ -27,16 +34,24 @@ const CardContainer = styled.div`
   grid-row: 2/6;
 `;
 
+const Title = styled.p`
+  grid-column: 1/13;
+  grid-row: 1/5;
+  font-size: 330%;
+  font-family: 'Lora', serif;
+`;
+
 export class LandingPage extends Component {
   render() {
     return (
       <LandingDiv>
-        <StyledJumbotron fluid>
-          <p>hey</p>
-        </StyledJumbotron>
+        <StyledJumbotron fluid />
         <CardContainer>
           <FloatingCard />
         </CardContainer>
+        <Title>
+          Andrew B. <br /> McIntosh
+        </Title>
       </LandingDiv>
     );
   }

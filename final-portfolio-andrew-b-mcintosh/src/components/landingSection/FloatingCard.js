@@ -12,20 +12,21 @@ const sizes = {
 
 const CardDiv = styled.div`
   background-color: white;
+
   grid-column: 1/4;
   grid-row: 2/4;
   box-shadow: 5px 10px;
+  z-index: 1;
 `;
 const BlueDiv = styled.div`
   background-color: navy;
-  justify-self: center;
-  grid-column: 2/4;
+  justify-self: stretch;
+  grid-column: 2/3;
   grid-row: 1/2;
   margin: 0;
   color: white;
-  width: 165px;
-  height: 42px;
-  z-index: 1;
+  height: 200%;
+  z-index: 2;
   box-shadow: 1px 1px 8px #888888;
 `;
 
@@ -33,15 +34,23 @@ const StyledDiv = styled.div`
   display: grid;
   max-width: 40rem;
   max-height: 40rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 20px 1fr 1fr;
+  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-rows: 10% 1fr 1fr;
+`;
+
+const BlueCardBodyText = styled.p`
+  text-align: center;
+  font-size: 1.8vw;
+  font-family: 'Playfair Display', serif;
+  color: white;
 `;
 
 const CardBodyText = styled.p`
-  padding: 1vw;
+  padding: 2vw;
   font-size: 1.8vw;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
+  margin: auto;
 
   ${'' /* @media (max-width: 700px) {
     font-size: 1rem;
@@ -57,7 +66,7 @@ export class FloatingCard extends Component {
     return (
       <StyledDiv>
         <BlueDiv>
-          <p>Andrew</p>
+          <BlueCardBodyText>Who:</BlueCardBodyText>
         </BlueDiv>
         <CardDiv>
           <Container>
