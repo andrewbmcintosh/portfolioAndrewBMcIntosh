@@ -11,12 +11,15 @@ const sizes = {
 };
 
 const CardDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
-
   grid-column: 1/4;
   grid-row: 2/4;
   box-shadow: 5px 10px;
   z-index: 1;
+  text-align: center;
 `;
 const BlueDiv = styled.div`
   background-color: navy;
@@ -32,8 +35,8 @@ const BlueDiv = styled.div`
 
 const StyledDiv = styled.div`
   display: grid;
-  max-width: 40rem;
-  max-height: 40rem;
+  max-width: 60rem;
+  max-height: 60rem;
   grid-template-columns: 3fr 2fr 1fr;
   grid-template-rows: 10% 1fr 1fr;
 `;
@@ -46,11 +49,14 @@ const BlueCardBodyText = styled.p`
 `;
 
 const CardBodyText = styled.p`
-  padding: 2vw;
+  ${'' /* padding: 1vw; */}
   font-size: 1.8vw;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
 
   ${'' /* @media (max-width: 700px) {
     font-size: 1rem;

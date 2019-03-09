@@ -4,7 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import styled from 'styled-components';
 
 const StyledNavbar = styled(Navbar)`
-  height: 100px;
+  height: 50px;
+  opacity: 0.2;
 `;
 
 export class TopNavBar extends Component {
