@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import SignupForm from './SignupForm';
-
+import PropTypes from 'prop-types';
 
 const SignupSection = styled.div`
   height: 200px;
@@ -21,5 +21,9 @@ export class SignupBar extends Component {
     );
   }
 }
+
+SignupBar.propTypes = {
+  env: PropTypes.object.isRequired
+};
 
 export default SignupBar;
