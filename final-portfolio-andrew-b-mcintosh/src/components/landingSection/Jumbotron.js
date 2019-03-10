@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 const StyledJumbotron = styled(Jumbotron)`
   background-color: red;

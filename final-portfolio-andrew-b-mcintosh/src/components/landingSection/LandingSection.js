@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import FloatingCard from './FloatingCard';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Navbar from 'react-bootstrap/Jumbotron';
-import TopNavBar from '../layout/TopNavBar';
 import Skills from './Skills';
 
 const StyledJumbotron = styled.div`

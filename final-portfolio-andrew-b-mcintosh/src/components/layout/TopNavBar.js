@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 const StyledNavbar = styled(Navbar)`
   height: 50px;

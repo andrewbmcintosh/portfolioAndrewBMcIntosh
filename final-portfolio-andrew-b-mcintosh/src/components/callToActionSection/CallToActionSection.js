@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import githubLogo from '../../media/githubLogo.png';
 
 const CallToActionSectionContainer = styled.div`

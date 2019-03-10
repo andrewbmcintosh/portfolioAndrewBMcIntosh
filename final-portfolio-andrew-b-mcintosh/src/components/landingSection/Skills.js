@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import icon from '../../media/icon.png';
 
 const SkillsSectionContainer = styled.div`
