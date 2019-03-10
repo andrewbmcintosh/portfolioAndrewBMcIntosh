@@ -46,10 +46,7 @@ export class ProjectSection extends Component {
             <SummaryText>
               I am endlessly curious about others and learning new things, and
               my intuitive sense for the needs of others allows me to create
-              value-driven work. After years of working with youth and their
-              families, I understand that connection happens on a deeper level
-              of shared understanding. Technology gives us a space to tell a
-              story and to invite others to be a part of it.
+              value-driven work.
             </SummaryText>
           </ProjectSummaryContainer>
           <SingleProjectContainer row={2} column={2}>
