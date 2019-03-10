@@ -3,6 +3,8 @@ import TopNavBar from './layout/TopNavBar';
 import LandingSection from './landingSection/LandingSection';
 import ProjectCard from './projectSection/ProjectCard';
 import ProjectSection from './projectSection/ProjectSection';
+import CallToActionSection from './callToActionSection/CallToActionSection';
+import SignupBar from './signupBar/SignupBar';
 
 export class Main extends Component {
   render() {
@@ -11,6 +13,8 @@ export class Main extends Component {
         <TopNavBar />
         <LandingSection />
         <ProjectSection />
+        <CallToActionSection />
+        <SignupBar env={this.props.env} />
       </React.Fragment>
     );
   }

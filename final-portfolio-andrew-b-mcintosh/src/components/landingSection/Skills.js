@@ -63,7 +63,6 @@ const SkillImage = styled.div`
   grid-row: 1;
   width: 50px;
   height: 50px;
-  border: 1px solid blue;
 `;
 
 export class Skills extends Component {
