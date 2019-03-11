@@ -4,14 +4,28 @@ import FloatingCard from './FloatingCard';
 import Skills from './Skills';
 import { media } from '../../styleUtils.js';
 
-const StyledJumbotron = styled.div`
+const LandingDiv = styled.div`
   display: grid;
-  grid-area: showcase;
-  grid-template-areas:
-    'title top topTwo'
-    'bottom bottomTwo floatingCardArea';
-  width: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(300px, auto);
+  column-gap: 1.5rem;
+  margin: 0 1.5rem;
+  background-color: #91b7bd;
+  ${media.phone`
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 1.5rem;
+       margin: 0 1.5rem;
+
+  `}
+`;
+
+const StyledJumbotron = styled.div`
+  margin: 0 -1.5rem;
+
+  grid-column: 1 / 13;
+  grid-row: 1;
   min-height: 350px;
+  max-height: ;
   background-image: url('https://i.imgur.com/dzy0eA5.jpg');
   background-position: center;
   background-size: cover;
@@ -22,27 +36,39 @@ const StyledJumbotron = styled.div`
   `}
 `;
 
-const LandingDiv = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-    'showcase showcase'
-    'showcase showcase'
-    'skills skills';
-  background-color: #91b7bd;
-`;
 const Title = styled.p`
-  grid-area: title;
+  grid-row: 1;
+  grid-column: 2/4;
   font-size: 330%;
   font-family: 'Lora', serif;
-`;
-const StyledFloatingCard = styled(FloatingCard)`
-  grid-area: floatingCardArea;
+  color: white;
+  z-index: 1;
 `;
 
-const SkillsContainer = styled.div`
-  grid-area: skills;
-  display: grid;
+const CardDiv = styled.div`
+  grid-row: 1;
+  grid-column: 7/12;
+  place-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 5px 10px;
+  text-align: center;
+`;
+
+const CardBodyText = styled.p`
+  ${'' /* padding: 1vw; */}
+  font-size: 1.8vw;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+`;
+
+const SkillsContainer = styled(Skills)`
+  grid-row: 2;
+  grid-columns: 1/12;
 `;
 
 // const StyledNavbar = styled.div`
@@ -55,16 +81,17 @@ export class LandingPage extends Component {
     return (
       <React.Fragment>
         <LandingDiv>
-          <StyledJumbotron>
-            <Title>
-              Andrew B. <br /> McIntosh
-            </Title>
-            <StyledFloatingCard />
-          </StyledJumbotron>
-
-          <SkillsContainer>
-            <Skills />
-          </SkillsContainer>
+          <Title>
+            Andrew B. <br /> McIntosh
+          </Title>
+          <StyledJumbotron />
+          <CardDiv>
+            <CardBodyText>
+              Full stack web developer with skills in React, Python, Javascript,
+              Express and a passion for connecting people.
+            </CardBodyText>
+          </CardDiv>
+          <SkillsContainer />
         </LandingDiv>
       </React.Fragment>
     );

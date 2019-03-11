@@ -21,7 +21,6 @@ const SingleSkillContainer = styled.div`
 const SkillsSummaryContainer = styled.div`
   margin-bottom: -50px;
   grid-column: 1/5;
-  grid-row: 1;
   text-align: center;
 `;
 
@@ -36,7 +35,7 @@ const SummaryText = styled.p`
 `;
 const SkillHeader = styled.p`
   font-size: 1.4rem;
-  grid-row: 2;
+
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   margin: auto;
@@ -46,7 +45,6 @@ const SkillHeader = styled.p`
 `;
 const SkillBody = styled.p`
   font-size: 0.8rem;
-  grid-row: 3;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   margin: auto;
@@ -60,7 +58,6 @@ const SkillImage = styled.div`
 
   ${'' /* background-image: url(${icon}); */}
   background-size: cover;
-  grid-row: 1;
   height: 50px;
 `;
 
