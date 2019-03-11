@@ -61,7 +61,6 @@ const SkillImage = styled.div`
   ${'' /* background-image: url(${icon}); */}
   background-size: cover;
   grid-row: 1;
-  width: 50px;
   height: 50px;
 `;
 

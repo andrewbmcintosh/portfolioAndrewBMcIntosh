@@ -33,7 +33,7 @@ const CallToActionBtn = styled.button`
   margin-top: 1.5rem;
   font-size: 1.4rem;
   height: 2rem;
-  width: 9rem;
+
   background: palevioletred;
   border: none;
   color: white;

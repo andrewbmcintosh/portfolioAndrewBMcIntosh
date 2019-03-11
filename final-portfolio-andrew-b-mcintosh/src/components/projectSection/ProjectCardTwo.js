@@ -18,7 +18,7 @@ const ProjectCardContainer = styled.div`
   ${'' /* max-width: 60rem;
   max-height: 60rem; */}
   height: 25rem;
-  width: 18rem;
+
   max-width: 20rem;
   max-height: 30rem;
   grid-template-columns: 10% 1fr 1fr 10%;
