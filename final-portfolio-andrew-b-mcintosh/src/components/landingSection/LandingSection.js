@@ -7,7 +7,7 @@ import { media } from '../../styleUtils.js';
 const LandingDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: min-content;
+  grid-template-rows: auto auto auto;
   column-gap: 1.5rem;
   margin: 0 1.5rem;
   background-color: #91b7bd;
@@ -18,12 +18,11 @@ const LandingDiv = styled.div`
 
   `}
 `;
-
 const StyledJumbotron = styled.div`
   margin: 0 -1.5rem;
 
   grid-column: 1 / 13;
-  grid-row: 1;
+  grid-row: 1 / 2;
   min-height: 350px;
   max-height: ;
   background-image: url('https://i.imgur.com/dzy0eA5.jpg');
@@ -34,9 +33,8 @@ const StyledJumbotron = styled.div`
     min-height: 600px;
   `}
 `;
-
 const Title = styled.p`
-  grid-row: 1;
+  grid-row: 1 / 2;
   grid-column: 1 / 4;
   font-size: 330%;
   font-family: 'Lora', serif;
@@ -45,7 +43,7 @@ const Title = styled.p`
 `;
 
 const CardDiv = styled.div`
-  grid-row: 1;
+  grid-row: 1 / 2;
   grid-column: 7 / 12;
   max-width: 30rem;
   place-self: end center;
@@ -66,20 +64,20 @@ const CardBodyText = styled.p`
   vertical-align: middle;
 `;
 
-const SkillsContainer = styled(Skills)`
-  grid-column: 1 / 12;
-`;
 const SkillsSummary = styled.div`
   font-size: 1.4rem;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
+  grid-column: 2 / 10;
   grid-row: 2 / 3;
-  grid-column: 3 / 10;
   padding: 1rem 0 4rem 0;
   text-align: center;
   vertical-align: middle;
 `;
-
+const SkillsContainer = styled(Skills)`
+  grid-column: 1 / 12;
+  grid-row: 3 / 4;
+`;
 export class LandingPage extends Component {
   render() {
     return (
@@ -103,7 +101,7 @@ export class LandingPage extends Component {
             shared understanding. Technology gives us a space to tell a story
             and to invite others to be a part of it.
           </SkillsSummary>
-          {/* <SkillsContainer /> */}
+          <SkillsContainer />
         </LandingDiv>
       </React.Fragment>
     );
