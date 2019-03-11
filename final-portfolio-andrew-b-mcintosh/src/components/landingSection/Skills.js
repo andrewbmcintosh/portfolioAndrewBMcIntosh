@@ -4,6 +4,7 @@ import icon from '../../media/icon.png';
 
 const SkillsSectionContainer = styled.div`
   display: grid;
+  justify-content: center;
   grid-gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `;
@@ -23,18 +24,21 @@ const SingleSkillContainer = styled.div`
 //   display: inline-block;
 // `;
 const SkillHeader = styled.p`
-  font-size: 1.4rem;
-
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 2.25rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
   margin: auto;
   text-align: center;
   vertical-align: middle;
 `;
 const SkillBody = styled.p`
-  font-size: 0.8rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 0.25;
+  line-height: 1.3rem;
+  font-family: 'Proza Libre', sans-serif;
+  font-weight: 400;
   margin: auto;
   text-align: center;
 `;
@@ -44,7 +48,8 @@ const SkillImage = styled.div`
 
   ${'' /* background-image: url(${icon}); */}
   background-size: cover;
-  height: 50px;
+  height: 4rem;
+  width: 4rem;
 `;
 
 export class Skills extends Component {

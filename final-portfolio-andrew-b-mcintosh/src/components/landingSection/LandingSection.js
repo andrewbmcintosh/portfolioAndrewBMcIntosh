@@ -36,8 +36,11 @@ const StyledJumbotron = styled.div`
 const Title = styled.p`
   grid-row: 1 / 2;
   grid-column: 1 / 4;
-  font-size: 330%;
-  font-family: 'Lora', serif;
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: -1.5;
+
   color: white;
   z-index: 1;
 `;
@@ -56,25 +59,28 @@ const CardDiv = styled.div`
 
 const CardBodyText = styled.p`
   ${'' /* padding: 1vw; */}
-  font-size: 1.8vw;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Proza Libre', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.15;
   margin: auto;
   text-align: center;
   vertical-align: middle;
 `;
 
 const SkillsSummary = styled.div`
-  font-size: 1.4rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-  grid-column: 2 / 10;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: regular;
+  letter-spacing: 0;
+  grid-column: 2 / 12;
   grid-row: 2 / 3;
-  padding: 1rem 0 4rem 0;
+  padding: 4rem 0 4rem 0;
   text-align: center;
   vertical-align: middle;
 `;
-const SkillsContainer = styled(Skills)`
+const SkillsContainer = styled.div`
   grid-column: 1 / 12;
   grid-row: 3 / 4;
 `;
@@ -101,7 +107,9 @@ export class LandingPage extends Component {
             shared understanding. Technology gives us a space to tell a story
             and to invite others to be a part of it.
           </SkillsSummary>
-          <SkillsContainer />
+          <SkillsContainer>
+            <Skills />
+          </SkillsContainer>
         </LandingDiv>
       </React.Fragment>
     );
