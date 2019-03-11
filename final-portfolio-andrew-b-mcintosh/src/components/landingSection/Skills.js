@@ -41,7 +41,6 @@ const SkillHeader = styled.p`
   margin: auto;
   text-align: center;
   vertical-align: middle;
-  display: inline-block;
 `;
 const SkillBody = styled.p`
   font-size: 0.8rem;

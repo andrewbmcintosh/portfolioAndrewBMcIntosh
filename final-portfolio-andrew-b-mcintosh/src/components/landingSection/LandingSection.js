@@ -7,7 +7,7 @@ import { media } from '../../styleUtils.js';
 const LandingDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(300px, auto);
+  grid-auto-rows: min-content;
   column-gap: 1.5rem;
   margin: 0 1.5rem;
   background-color: #91b7bd;
@@ -30,7 +30,6 @@ const StyledJumbotron = styled.div`
   background-position: center;
   background-size: cover;
   align-items: center;
-
   ${media.phone`
     min-height: 600px;
   `}
@@ -38,7 +37,7 @@ const StyledJumbotron = styled.div`
 
 const Title = styled.p`
   grid-row: 1;
-  grid-column: 2/4;
+  grid-column: 1 / 4;
   font-size: 330%;
   font-family: 'Lora', serif;
   color: white;
@@ -47,9 +46,10 @@ const Title = styled.p`
 
 const CardDiv = styled.div`
   grid-row: 1;
-  grid-column: 7/12;
-  place-self: center;
-  align-items: center;
+  grid-column: 7 / 12;
+  max-width: 30rem;
+  place-self: end center;
+  padding: 0.5rem 0.7rem;
   justify-content: center;
   background-color: white;
   box-shadow: 5px 10px;
@@ -67,14 +67,18 @@ const CardBodyText = styled.p`
 `;
 
 const SkillsContainer = styled(Skills)`
-  grid-row: 2;
-  grid-columns: 1/12;
+  grid-column: 1 / 12;
 `;
-
-// const StyledNavbar = styled.div`
-//   grid-
-//   opacity: 0.2;
-// `;
+const SkillsSummary = styled.div`
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  grid-row: 2 / 3;
+  grid-column: 3 / 10;
+  padding: 1rem 0 4rem 0;
+  text-align: center;
+  vertical-align: middle;
+`;
 
 export class LandingPage extends Component {
   render() {
@@ -91,7 +95,15 @@ export class LandingPage extends Component {
               Express and a passion for connecting people.
             </CardBodyText>
           </CardDiv>
-          <SkillsContainer />
+          <SkillsSummary>
+            I am endlessly curious about others and learning new things, and my
+            intuitive sense for the needs of others allows me to create
+            value-driven work. After years of working with youth and their
+            families, I understand that connection happens on a deeper level of
+            shared understanding. Technology gives us a space to tell a story
+            and to invite others to be a part of it.
+          </SkillsSummary>
+          {/* <SkillsContainer /> */}
         </LandingDiv>
       </React.Fragment>
     );
