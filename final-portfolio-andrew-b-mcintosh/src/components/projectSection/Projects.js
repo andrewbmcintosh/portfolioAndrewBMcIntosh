@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/macro';
-import icon from '../../media/icon.png';
-import javascript from '../../media/javascript.png';
-import react from '../../media/react.png';
-import nodeJs from '../../media/nodeJs.png';
-import python from '../../media/python.png';
-import communication from '../../media/communication.png';
-import collaboration from '../../media/collaboration.png';
-import resiliency from '../../media/resiliency.png';
-
-import research from '../../media/research.png';
 
 import { media } from '../../styleUtils.js';
 

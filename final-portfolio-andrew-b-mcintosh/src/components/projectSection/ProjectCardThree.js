@@ -74,7 +74,7 @@ export class ProjectCardThree extends Component {
       <ProjectCardContainer>
         <ProjectImage />
         <ProjectCardDiv />
-        <CardHeaderText>Annas Nice</CardHeaderText>
+        <CardHeaderText>HomePage</CardHeaderText>
         <CardBodyText>Tree Planting Initiatives</CardBodyText>
         <ProjectBtn>Read More</ProjectBtn>
       </ProjectCardContainer>

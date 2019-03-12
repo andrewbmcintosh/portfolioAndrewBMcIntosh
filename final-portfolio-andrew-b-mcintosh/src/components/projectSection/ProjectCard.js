@@ -73,7 +73,7 @@ export class ProjectCard extends Component {
       <ProjectCardContainer>
         <ProjectImage />
         <ProjectCardDiv />
-        <CardHeaderText>Annas Nice</CardHeaderText>
+        <CardHeaderText>DesirePath</CardHeaderText>
         <CardBodyText>Tree Planting Initiatives</CardBodyText>
         <ProjectBtn>Read More</ProjectBtn>
       </ProjectCardContainer>
