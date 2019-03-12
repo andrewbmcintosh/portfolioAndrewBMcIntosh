@@ -16,6 +16,8 @@ const ProjectCardDiv = styled.div`
 `;
 const ProjectCardContainer = styled.div`
   display: grid;
+  grid-row: 2;
+
   ${'' /* max-width: 60rem;
   max-height: 60rem; */}
   height: 25rem;
@@ -25,7 +27,7 @@ const ProjectCardContainer = styled.div`
   grid-template-columns: 10% 1fr 1fr 10%;
   grid-template-rows: 10% 2fr 1fr 1fr 1fr;
   ${media.phone`
-    top-margin: 10rem;
+    padding: 5rem 0;
   `}
 `;
 const ProjectImage = styled.div`

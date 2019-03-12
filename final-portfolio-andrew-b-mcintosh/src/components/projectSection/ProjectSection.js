@@ -14,23 +14,23 @@ const BackgroundDiv = styled.div`
   `}
 `;
 const ProjectSectionContainer = styled.div`
-  overflow: hidden;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto auto;
   column-gap: 1.5rem;
-  margin: 0 1.5rem;
+  ${'' /* margin: 0 1.5rem; */}
   background-color: #354463;
   ${media.phone`
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto auto auto auto auto;
       column-gap: 1rem;
-      margin: 0 1.5rem;
+      ${'' /* margin: 0 1.5rem; */}
       background-color: #354463;
   `}
   ${media.tablet`
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto auto auto ;
+      grid-template-rows: auto auto auto;
       column-gap: 1rem;
       margin: 0 1.5rem;
       padding-top: 1.5rem;
@@ -51,12 +51,14 @@ const ProjectsContainer = styled.div`
   justify-items: center;
   `}
   ${media.phone`
-  align-content: space-around;
-  justify-content: space-evenly;
+  align-content: space-evenly;
+  justify-content: stretch;
   grid-column: 1 / 5;
   grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto auto auto;
   grid-gap: 6rem;
+  padding-top: 4rem;
   margin: 2.5rem .5rem;
   `}
 `;
@@ -80,18 +82,7 @@ const SummaryText = styled.div`
     grid-column: 1 / 5;
   `}
 `;
-// const SingleProjectContainer = styled.div`
-//   padding: 1rem;
-//   display: grid;
-//   grid-template-row: 1fr 1fr 1fr;
-//   ${media.phone`
-//    padding: .8rem 0;
-//   `}
-//   ${media.tablet`
-//   grid-column: ${props => `${props.column}`};
-//   grid-row: ${props => `${props.row}`};
-//   `}
-// `;
+
 const TitleBox = styled.div`
   position: relative;
   place-self: center;
@@ -105,7 +96,6 @@ const TitleBox = styled.div`
   font-weight: 700;
   margin-bottom: 1rem;
   padding: 0.5rem 2rem;
-  border-radius: ;
   z-index: 1;
   ${media.phone`
     font-size: 1.25rem;
