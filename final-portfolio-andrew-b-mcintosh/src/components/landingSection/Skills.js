@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/macro';
 import icon from '../../media/icon.png';
+import javascript from '../../media/javascript.png';
+import react from '../../media/react.png';
+
+import { media } from '../../styleUtils.js';
 
 const SkillsSectionContainer = styled.div`
   display: grid;
-  justify-content: center;
   grid-gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  ${media.tablet`
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  `}
 `;
 
 const SingleSkillContainer = styled.div`
@@ -57,8 +63,16 @@ export class Skills extends Component {
     return (
       <SkillsSectionContainer>
         <SingleSkillContainer>
-          <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
+          <SkillImage background={javascript} />
+          <SkillHeader>Javascript</SkillHeader>
+          <SkillBody>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
+            scelerisque lectus.
+          </SkillBody>
+        </SingleSkillContainer>
+        <SingleSkillContainer>
+          <SkillImage background={react} />
+          <SkillHeader>React</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
             scelerisque lectus.
@@ -66,7 +80,7 @@ export class Skills extends Component {
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
+          <SkillHeader>Node.js</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
             scelerisque lectus.
@@ -74,7 +88,7 @@ export class Skills extends Component {
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
+          <SkillHeader>Python</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
             scelerisque lectus.
@@ -82,7 +96,7 @@ export class Skills extends Component {
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
+          <SkillHeader>Communication</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
             scelerisque lectus.
@@ -90,7 +104,7 @@ export class Skills extends Component {
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
+          <SkillHeader>Collaboration</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
             scelerisque lectus.
@@ -98,7 +112,7 @@ export class Skills extends Component {
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
+          <SkillHeader>Resiliency</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
             scelerisque lectus.
@@ -106,15 +120,7 @@ export class Skills extends Component {
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={icon} />
-          <SkillHeader>Work from love</SkillHeader>
+          <SkillHeader>Research</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
             scelerisque lectus.

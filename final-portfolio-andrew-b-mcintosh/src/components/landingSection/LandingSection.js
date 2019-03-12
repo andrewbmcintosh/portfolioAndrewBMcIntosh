@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 import FloatingCard from './FloatingCard';
 import Skills from './Skills';
 import { media } from '../../styleUtils.js';
+import mobileJumbotronColorAdjusted from '../../media/mobileJumbotronColorAdjusted.jpg';
 
 const LandingDiv = styled.div`
   display: grid;
@@ -12,9 +13,11 @@ const LandingDiv = styled.div`
   margin: 0 1.5rem;
   background-color: #91b7bd;
   ${media.phone`
-      grid-template-columns: repeat(12, 1fr);
-      column-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 1rem;
        margin: 0 1.5rem;
+         background-color: #354463;
+
 
   `}
 `;
@@ -30,7 +33,15 @@ const StyledJumbotron = styled.div`
   background-size: cover;
   align-items: center;
   ${media.phone`
-    min-height: 600px;
+    font-size: .85rem;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    min-height: 40rem;
+    max-height: 40rem;
+     
+        background-image: url(${mobileJumbotronColorAdjusted});
+
+
   `}
 `;
 const Title = styled.p`
@@ -40,9 +51,15 @@ const Title = styled.p`
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
   letter-spacing: -1.5;
-
   color: white;
   z-index: 1;
+  ${media.phone`
+    text-align: end;
+    font-size: 3rem;
+    line-height: 3rem;
+    grid-column: 1 / 5;
+    display:
+  `}
 `;
 
 const CardDiv = styled.div`
@@ -55,6 +72,12 @@ const CardDiv = styled.div`
   background-color: white;
   box-shadow: 5px 10px;
   text-align: center;
+  ${media.phone`
+    font-size: .85rem;
+    grid-column: 1 / 5;
+    max-width: 100rem;
+    margin-bottom: 3rem;
+  `}
 `;
 
 const CardBodyText = styled.p`
@@ -66,10 +89,17 @@ const CardBodyText = styled.p`
   margin: auto;
   text-align: center;
   vertical-align: middle;
+  ${media.phone`
+    font-size: 1.3rem;
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    padding: 1.5rem 1rem;
+  `}
 `;
 
 const SkillsSummary = styled.div`
   font-size: 1.5rem;
+  color: white;
   line-height: 1.7rem;
   font-family: 'Cormorant Garamond', serif;
   font-weight: regular;
@@ -79,10 +109,20 @@ const SkillsSummary = styled.div`
   padding: 4rem 0 4rem 0;
   text-align: center;
   vertical-align: middle;
+  ${media.phone`
+    font-size: .85rem;
+    grid-column: 1 / 5;
+
+  `}
 `;
 const SkillsContainer = styled.div`
   grid-column: 1 / 12;
   grid-row: 3 / 4;
+  ${media.phone`
+    font-size: .85rem;
+    grid-column: 1 / 5;
+   
+  `}
 `;
 export class LandingPage extends Component {
   render() {
