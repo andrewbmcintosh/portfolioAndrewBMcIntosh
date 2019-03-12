@@ -22,11 +22,18 @@ const SkillsSectionContainer = styled.div`
   ${media.tablet`
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   `}
+  ${media.phone`
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  `}
 `;
 
 const SingleSkillContainer = styled.div`
   text-align: center;
   padding: 1.5rem 2rem;
+  ${media.phone`
+  padding: .8rem 0;
+  `}
 `;
 
 // const SummaryText = styled.p`
