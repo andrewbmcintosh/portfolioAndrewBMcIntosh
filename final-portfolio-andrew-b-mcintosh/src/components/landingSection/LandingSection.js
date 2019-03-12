@@ -118,8 +118,16 @@ const SkillsSummary = styled.div`
   `}
 `;
 const SkillsContainer = styled.div`
-  grid-column: 1 / 12;
+  grid-column: 1 / 13;
   grid-row: 3 / 4;
+  display: grid;
+  padding: 0 0 4rem 0;
+  ${'' /* justify-items: stretch;
+  align-items: stretch; */}
+   ${media.tablet`
+    ${'' /* font-size: .85rem;
+    grid-column: 1 / 5; */}
+  `}
   ${media.phone`
     font-size: .85rem;
     grid-column: 1 / 5;

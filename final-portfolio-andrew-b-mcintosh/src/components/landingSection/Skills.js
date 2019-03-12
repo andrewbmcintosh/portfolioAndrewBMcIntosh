@@ -21,6 +21,8 @@ const SkillsSectionContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   ${media.tablet`
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  place-content: stretch;
   `}
   ${media.phone`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -31,6 +33,9 @@ const SkillsSectionContainer = styled.div`
 const SingleSkillContainer = styled.div`
   text-align: center;
   padding: 1.5rem 2rem;
+  ${media.tablet`
+  padding: .8rem 1rem;
+  `}
   ${media.phone`
   padding: .8rem 0;
   `}
@@ -55,6 +60,9 @@ const SkillHeader = styled.p`
   margin: auto;
   text-align: center;
   vertical-align: middle;
+  ${media.tablet`
+   font-size: 1.25rem;
+  `}
 `;
 const SkillBody = styled.p`
   font-size: 0.875rem;
@@ -65,6 +73,9 @@ const SkillBody = styled.p`
   color: white;
   margin: auto;
   text-align: center;
+  ${media.tablet`
+   font-size: 1.25rem;
+  `}
 `;
 
 const SkillImage = styled.div`
@@ -74,6 +85,9 @@ const SkillImage = styled.div`
   background-size: cover;
   height: 4rem;
   width: 4rem;
+  ${media.tablet`
+    margin: auto;
+  `}
   ${media.phone`
     margin: auto;
   `}
