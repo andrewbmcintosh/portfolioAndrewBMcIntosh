@@ -4,36 +4,36 @@ import { media } from '../../styleUtils.js';
 import ProjectCard from './ProjectCard';
 import ProjectCardTwo from './ProjectCardTwo';
 import ProjectCardThree from './ProjectCardThree';
+import Projects from './Projects.js';
 
 const BackgroundDiv = styled.div`
   margin: 0;
   padding: 0;
-  background-color: #354463;
+  background-color: #91b7bd;
   ${media.phone`
     background-color: #354463;
   `}
 `;
 const ProjectSectionContainer = styled.div`
-  overflow-x: hidden;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto auto;
   column-gap: 1.5rem;
-  ${'' /* margin: 0 1.5rem; */}
+  margin: 0 1.5rem;
   background-color: #354463;
   ${media.phone`
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto auto auto auto auto;
       column-gap: 1rem;
-      ${'' /* margin: 0 1.5rem; */}
+      margin: 0 1.5rem;
       background-color: #354463;
   `}
   ${media.tablet`
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
       column-gap: 1rem;
       margin: 0 1.5rem;
-      padding-top: 1.5rem;
       background-color: #354463;
   `}
 `;
@@ -51,14 +51,12 @@ const ProjectsContainer = styled.div`
   justify-items: center;
   `}
   ${media.phone`
-  align-content: space-evenly;
-  justify-content: stretch;
+  align-content: space-around;
+  justify-content: space-evenly;
   grid-column: 1 / 5;
   grid-row: 3;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: auto auto auto;
   grid-gap: 6rem;
-  padding-top: 4rem;
   margin: 2.5rem .5rem;
   `}
 `;
@@ -82,7 +80,18 @@ const SummaryText = styled.div`
     grid-column: 1 / 5;
   `}
 `;
-
+// const SingleProjectContainer = styled.div`
+//   padding: 1rem;
+//   display: grid;
+//   grid-template-row: 1fr 1fr 1fr;
+//   ${media.phone`
+//    padding: .8rem 0;
+//   `}
+//   ${media.tablet`
+//   grid-column: ${props => `${props.column}`};
+//   grid-row: ${props => `${props.row}`};
+//   `}
+// `;
 const TitleBox = styled.div`
   position: relative;
   place-self: center;
@@ -96,12 +105,13 @@ const TitleBox = styled.div`
   font-weight: 700;
   margin-bottom: 1rem;
   padding: 0.5rem 2rem;
+  border-radius: ;
   z-index: 1;
   ${media.phone`
     font-size: 1.25rem;
     grid-column: 1 / 5;
   `}
-  ${media.tablet`
+  ${media.phone`
     font-size: 1.25rem;
     grid-column: 1 / 5;
   `}
@@ -119,9 +129,7 @@ export class ProjectSection extends Component {
             value-driven work.
           </SummaryText>
           <ProjectsContainer>
-            <ProjectCard />
-            <ProjectCardTwo />
-            <ProjectCardThree />
+            <Projects />
           </ProjectsContainer>
         </ProjectSectionContainer>
       </BackgroundDiv>

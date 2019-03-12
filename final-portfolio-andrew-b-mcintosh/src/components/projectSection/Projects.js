@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/macro';
-
 import { media } from '../../styleUtils.js';
+import githubLogo from '../../media/githubLogo.png';
+import projectTwoImage from '../../media/projectTwoWithTerminal.png';
 
-const SkillsSectionContainer = styled.div`
+const ProjectsSectionContainer = styled.div`
   overflow: hidden;
   display: grid;
   grid-gap: 1.25rem;
@@ -20,34 +21,29 @@ const SkillsSectionContainer = styled.div`
   `}
 `;
 
-const SingleSkillContainer = styled.div`
+const SingleProjectContainer = styled.div`
   ${'' /* text-align: center; */}
+  display: grid;
   align-items: start;
+  grid-template-rows: auto auto auto auto;
   padding: 1.5rem 2rem;
+  background-color: white;
+  box-shadow: 5px 10px;
   ${media.tablet`
   padding: .8rem 1rem;
   `}
   ${media.phone`
-  padding: .8rem 0;
+  margin-top: 7rem;
   `}
 `;
-
-// const SummaryText = styled.p`
-//   font-size: 1.4rem;
-//   font-family: 'Playfair Display', serif;
-//   font-weight: bold;
-//   padding: 1rem 0 4rem 0;
-//   text-align: center;
-//   vertical-align: middle;
-//   display: inline-block;
-// `;
-const SkillHeader = styled.p`
-  font-size: 1.5rem;
+const ProjectHeader = styled.p`
+  font-size: 1.8rem;
   letter-spacing: 0;
+  grid-row: 2;
   line-height: 2.25rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
-  color: white;
+
   margin: auto;
   ${'' /* text-align: center; */}
   vertical-align: middle;
@@ -56,15 +52,16 @@ const SkillHeader = styled.p`
   `}
   ${media.phone`
    text-align: center;
+    font-size: 1.8rem;
+
   `}
 `;
-const SkillBody = styled.p`
+const ProjectBody = styled.p`
   font-size: 0.875rem;
-  letter-spacing: 0.25;
-  line-height: 1.3rem;
+  grid-row: 3;;
+  line-height: 2rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: white;
   margin: auto;
   ${'' /* text-align: center; */}
   ${media.tablet`
@@ -72,95 +69,130 @@ const SkillBody = styled.p`
   `}
     ${media.phone`
    text-align: center;
+   font-size: 0.875rem;
   `}
 `;
 
-const SkillImage = styled.div`
+const ProjectImage = styled.div`
   background-image: ${props => `url(${props.background})`};
 
   ${'' /* background-image: url(${icon}); */}
   background-size: cover;
   height: 4rem;
   width: 4rem;
+  box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.75);
+
   ${media.tablet`
     margin: auto;
   `}
   ${media.phone`
-    margin: auto;
+    margin-top: -7rem;
+    height:12rem;
+    width:16rem;
   `}
 `;
+const ButtonContainer = styled.div`
+  justify-content: space-around;
+  place-self: stretch;
+  display: flex;
+  flex-direction: row;
+  grid-row: 4;
+`;
+const ProjectGithubBtn = styled.div`
+  justify-self: center;
+  display: flex;
+  margin-bottom: 1rem;
+  align-self: center;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  background: #c1f7d5;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: #354463;
+`;
+const ProjectBtn = styled.div`
+  justify-self: center;
+  margin-bottom: 1rem;
+  text-align: center;
+  align-self: center;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  background: #c1f7d5;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: #354463;
+`;
+const SocialIcon = styled.div`
+  background-image: ${props => `url(${props.background})`};
+  background-size: cover;
+  margin: auto auto auto 0.25rem;
+  width: 15px;
+  height: 15px;
+`;
 
-export class Skills extends Component {
+export class Projects extends Component {
   render() {
     return (
-      <SkillsSectionContainer>
-        <SingleSkillContainer>
-          <SkillImage background={javascript} />
-          <SkillHeader>Javascript</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={react} />
-          <SkillHeader>React</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={nodeJs} />
-          <SkillHeader>Node.js</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={python} />
-          <SkillHeader>Python</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={communication} />
-          <SkillHeader>Communication</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={collaboration} />
-          <SkillHeader>Collaboration</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={resiliency} />
-          <SkillHeader>Resiliency</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-        <SingleSkillContainer>
-          <SkillImage background={research} />
-          <SkillHeader>Research</SkillHeader>
-          <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
-          </SkillBody>
-        </SingleSkillContainer>
-      </SkillsSectionContainer>
+      <ProjectsSectionContainer>
+        <SingleProjectContainer>
+          <ProjectImage background={projectTwoImage} />
+          <ProjectHeader>DesirePath</ProjectHeader>
+          <ProjectBody>
+            HomePage is a project that utilizes a users Coordinates, Google’s
+            Geolocation API, Mongoose, React.js, and Node.js to create a Full
+            Stack web application. When a user pings their location to HomePage
+            their current status is automatically updated to the “type” of place
+            associated with their coordinates.
+          </ProjectBody>
+          <ButtonContainer>
+            <ProjectBtn>Link To Site</ProjectBtn>
+            <ProjectGithubBtn>
+              The Code
+              <SocialIcon background={githubLogo} />
+            </ProjectGithubBtn>
+          </ButtonContainer>
+        </SingleProjectContainer>
+        <SingleProjectContainer>
+          <ProjectImage background={projectTwoImage} />
+          <ProjectHeader>HomePage</ProjectHeader>
+          <ProjectBody>
+            HomePage is a project that utilizes a users Coordinates, Google’s
+            Geolocation API, Mongoose, React.js, and Node.js to create a Full
+            Stack web application. When a user pings their location to HomePage
+            their current status is automatically updated to the “type” of place
+            associated with their coordinates.
+          </ProjectBody>
+          <ButtonContainer>
+            <ProjectBtn>Link To Site</ProjectBtn>
+            <ProjectGithubBtn>
+              The Code
+              <SocialIcon background={githubLogo} />
+            </ProjectGithubBtn>
+          </ButtonContainer>
+        </SingleProjectContainer>
+        <SingleProjectContainer>
+          <ProjectImage background={projectTwoImage} />
+          <ProjectHeader>PersistCS</ProjectHeader>
+          <ProjectBody>
+            HomePage is a project that utilizes a users Coordinates, Google’s
+            Geolocation API, Mongoose, React.js, and Node.js to create a Full
+            Stack web application. When a user pings their location to HomePage
+            their current status is automatically updated to the “type” of place
+            associated with their coordinates.
+          </ProjectBody>
+          <ButtonContainer>
+            <ProjectBtn>Link To Site</ProjectBtn>
+            <ProjectGithubBtn>
+              The Code
+              <SocialIcon background={githubLogo} />
+            </ProjectGithubBtn>
+          </ButtonContainer>
+        </SingleProjectContainer>
+      </ProjectsSectionContainer>
     );
   }
 }
 
-export default Skills;
+export default Projects;

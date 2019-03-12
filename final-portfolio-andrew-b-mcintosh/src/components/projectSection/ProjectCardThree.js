@@ -17,7 +17,7 @@ const ProjectCardDiv = styled.div`
 const ProjectCardContainer = styled.div`
   display: grid;
   grid-row: 3;
-
+  height: 100%;
   max-width: 60rem;
   max-height: 60rem;
   height: 25rem;

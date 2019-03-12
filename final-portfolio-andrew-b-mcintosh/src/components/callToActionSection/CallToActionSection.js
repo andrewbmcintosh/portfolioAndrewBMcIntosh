@@ -6,11 +6,11 @@ const CallToActionSectionContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: #b1e1c9;
-  height: 100%;
+  ${'' /* height: 100%; */}
 `;
 
 const ProjectSummaryContainer = styled.div`
-  margin-bottom: -50px;
+  ${'' /* margin-bottom: -50px; */}
   grid-column: 2/5;
   grid-row: 1;
   text-align: center;
