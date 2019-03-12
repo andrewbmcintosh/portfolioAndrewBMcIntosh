@@ -6,9 +6,9 @@ import Main from './components/Main';
 class App extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Main env={this.props.env} />
-      </div>
+      </React.Fragment>
     );
   }
 }

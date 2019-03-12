@@ -20,6 +20,8 @@ const LandingDiv = styled.div`
   `}
 `;
 const BackgroundDiv = styled.div`
+  margin: 0;
+  padding: 0;
   background-color: #91b7bd;
   ${media.phone`
          background-color: #354463;
@@ -30,7 +32,6 @@ const StyledJumbotron = styled.div`
   grid-column: 1 / 13;
   grid-row: 1 / 2;
   min-height: 350px;
-  max-height: ;
   background-image: url('https://i.imgur.com/dzy0eA5.jpg');
   background-position: center;
   background-size: cover;
@@ -60,7 +61,7 @@ const Title = styled.p`
     margin-top: .5rem;
     margin-right: -1.2rem;
     grid-column: 1 / 5;
-    display:
+  
   `}
 `;
 
@@ -85,8 +86,8 @@ const CardDiv = styled.div`
 const CardBodyText = styled.p`
   ${'' /* padding: 1vw; */}
   font-size: 1rem;
-  font-family: 'Proza Libre', sans-serif;
-  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   letter-spacing: 0.15;
   margin: auto;
   text-align: center;
@@ -103,8 +104,8 @@ const SkillsSummary = styled.div`
   font-size: 1.5rem;
   color: white;
   line-height: 1.7rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: regular;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   letter-spacing: 0;
   grid-column: 2 / 12;
   grid-row: 2 / 3;

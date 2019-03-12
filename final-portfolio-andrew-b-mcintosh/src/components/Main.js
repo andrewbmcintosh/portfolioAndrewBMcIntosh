@@ -13,13 +13,13 @@ const Wrapper = styled.div`
 export class Main extends Component {
   render() {
     return (
-      <Wrapper>
+      <React.Fragment>
         <TopNavBar />
         <LandingSection />
         <ProjectSection />
         <CallToActionSection />
         <SignupBar env={this.props.env} />
-      </Wrapper>
+      </React.Fragment>
     );
   }
 }

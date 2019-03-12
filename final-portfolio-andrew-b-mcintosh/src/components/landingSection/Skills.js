@@ -3,12 +3,21 @@ import styled from 'styled-components/macro';
 import icon from '../../media/icon.png';
 import javascript from '../../media/javascript.png';
 import react from '../../media/react.png';
+import nodeJs from '../../media/nodeJs.png';
+import python from '../../media/python.png';
+import communication from '../../media/communication.png';
+import collaboration from '../../media/collaboration.png';
+import resiliency from '../../media/resiliency.png';
+
+import research from '../../media/research.png';
 
 import { media } from '../../styleUtils.js';
 
 const SkillsSectionContainer = styled.div`
+  overflow: hidden;
   display: grid;
   grid-gap: 1.25rem;
+
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   ${media.tablet`
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -33,8 +42,9 @@ const SkillHeader = styled.p`
   font-size: 1.5rem;
   letter-spacing: 0;
   line-height: 2.25rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: white;
   margin: auto;
   text-align: center;
   vertical-align: middle;
@@ -43,8 +53,9 @@ const SkillBody = styled.p`
   font-size: 0.875rem;
   letter-spacing: 0.25;
   line-height: 1.3rem;
-  font-family: 'Proza Libre', sans-serif;
-  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: white;
   margin: auto;
   text-align: center;
 `;
@@ -56,6 +67,9 @@ const SkillImage = styled.div`
   background-size: cover;
   height: 4rem;
   width: 4rem;
+  ${media.phone`
+    margin: auto;
+  `}
 `;
 
 export class Skills extends Component {
@@ -79,7 +93,7 @@ export class Skills extends Component {
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
-          <SkillImage background={icon} />
+          <SkillImage background={nodeJs} />
           <SkillHeader>Node.js</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
@@ -87,7 +101,7 @@ export class Skills extends Component {
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
-          <SkillImage background={icon} />
+          <SkillImage background={python} />
           <SkillHeader>Python</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
@@ -95,7 +109,7 @@ export class Skills extends Component {
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
-          <SkillImage background={icon} />
+          <SkillImage background={communication} />
           <SkillHeader>Communication</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
@@ -103,7 +117,7 @@ export class Skills extends Component {
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
-          <SkillImage background={icon} />
+          <SkillImage background={collaboration} />
           <SkillHeader>Collaboration</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
@@ -111,7 +125,7 @@ export class Skills extends Component {
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
-          <SkillImage background={icon} />
+          <SkillImage background={resiliency} />
           <SkillHeader>Resiliency</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
@@ -119,7 +133,7 @@ export class Skills extends Component {
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
-          <SkillImage background={icon} />
+          <SkillImage background={research} />
           <SkillHeader>Research</SkillHeader>
           <SkillBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
