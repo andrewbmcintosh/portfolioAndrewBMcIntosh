@@ -6,11 +6,8 @@ import CallToActionSection from './callToActionSection/CallToActionSection';
 import SignupBar from './signupBar/SignupBar';
 import styled from 'styled-components/macro';
 
-
-
 const Wrapper = styled.div`
   display: grid;
-  grid-gap: 20px;
 `;
 
 export class Main extends Component {

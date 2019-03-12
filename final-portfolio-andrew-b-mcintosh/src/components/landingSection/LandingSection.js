@@ -17,13 +17,16 @@ const LandingDiv = styled.div`
       column-gap: 1rem;
        margin: 0 1.5rem;
          background-color: #354463;
-
-
+  `}
+`;
+const BackgroundDiv = styled.div`
+  background-color: #91b7bd;
+  ${media.phone`
+         background-color: #354463;
   `}
 `;
 const StyledJumbotron = styled.div`
   margin: 0 -1.5rem;
-
   grid-column: 1 / 13;
   grid-row: 1 / 2;
   min-height: 350px;
@@ -38,10 +41,7 @@ const StyledJumbotron = styled.div`
     grid-row: 1 / 2;
     min-height: 40rem;
     max-height: 40rem;
-     
-        background-image: url(${mobileJumbotronColorAdjusted});
-
-
+    background-image: url(${mobileJumbotronColorAdjusted});
   `}
 `;
 const Title = styled.p`
@@ -55,8 +55,10 @@ const Title = styled.p`
   z-index: 1;
   ${media.phone`
     text-align: end;
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 3.6rem;
+    line-height: 3.2rem;
+    margin-top: .5rem;
+    margin-right: -1.2rem;
     grid-column: 1 / 5;
     display:
   `}
@@ -70,7 +72,7 @@ const CardDiv = styled.div`
   padding: 0.5rem 0.7rem;
   justify-content: center;
   background-color: white;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #635435;
   text-align: center;
   ${media.phone`
     font-size: .85rem;
@@ -110,9 +112,8 @@ const SkillsSummary = styled.div`
   text-align: center;
   vertical-align: middle;
   ${media.phone`
-    font-size: .85rem;
+    font-size: 1.25rem;
     grid-column: 1 / 5;
-
   `}
 `;
 const SkillsContainer = styled.div`
@@ -121,16 +122,16 @@ const SkillsContainer = styled.div`
   ${media.phone`
     font-size: .85rem;
     grid-column: 1 / 5;
-   
   `}
 `;
 export class LandingPage extends Component {
   render() {
     return (
-      <React.Fragment>
+      <BackgroundDiv>
         <LandingDiv>
           <Title>
-            Andrew B. <br /> McIntosh
+            Andrew B.
+            <br /> McIntosh
           </Title>
           <StyledJumbotron />
           <CardDiv>
@@ -151,7 +152,7 @@ export class LandingPage extends Component {
             <Skills />
           </SkillsContainer>
         </LandingDiv>
-      </React.Fragment>
+      </BackgroundDiv>
     );
   }
 }
