@@ -8,7 +8,7 @@ import ProjectCardThree from './ProjectCardThree';
 const BackgroundDiv = styled.div`
   margin: 0;
   padding: 0;
-  background-color: #91b7bd;
+  background-color: #354463;
   ${media.phone`
     background-color: #354463;
   `}
@@ -28,6 +28,14 @@ const ProjectSectionContainer = styled.div`
       margin: 0 1.5rem;
       background-color: #354463;
   `}
+  ${media.tablet`
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto auto ;
+      column-gap: 1rem;
+      margin: 0 1.5rem;
+      padding-top: 1.5rem;
+      background-color: #354463;
+  `}
 `;
 const ProjectsContainer = styled.div`
   overflow: hidden;
@@ -36,8 +44,11 @@ const ProjectsContainer = styled.div`
   ${'' /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */}
   ${media.tablet`
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-column: 1 / 5;
+  grid-row: 3;
   grid-gap: 1rem;
   place-content: stretch;
+  justify-items: center;
   `}
   ${media.phone`
   align-content: space-around;
@@ -64,19 +75,23 @@ const SummaryText = styled.div`
     font-size: 1.25rem;
     grid-column: 1 / 5;
   `}
-`;
-const SingleProjectContainer = styled.div`
-  padding: 1rem;
-  display: grid;
-  grid-template-row: 1fr 1fr 1fr;
-  ${media.phone`
-   padding: .8rem 0;
-  `}
   ${media.tablet`
-  grid-column: ${props => `${props.column}`};
-  grid-row: ${props => `${props.row}`};
+    font-size: 1.25rem;
+    grid-column: 1 / 5;
   `}
 `;
+// const SingleProjectContainer = styled.div`
+//   padding: 1rem;
+//   display: grid;
+//   grid-template-row: 1fr 1fr 1fr;
+//   ${media.phone`
+//    padding: .8rem 0;
+//   `}
+//   ${media.tablet`
+//   grid-column: ${props => `${props.column}`};
+//   grid-row: ${props => `${props.row}`};
+//   `}
+// `;
 const TitleBox = styled.div`
   position: relative;
   place-self: center;
@@ -93,6 +108,10 @@ const TitleBox = styled.div`
   border-radius: ;
   z-index: 1;
   ${media.phone`
+    font-size: 1.25rem;
+    grid-column: 1 / 5;
+  `}
+  ${media.tablet`
     font-size: 1.25rem;
     grid-column: 1 / 5;
   `}

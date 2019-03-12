@@ -74,7 +74,13 @@ export class ProjectCard extends Component {
         <ProjectImage />
         <ProjectCardDiv />
         <CardHeaderText>DesirePath</CardHeaderText>
-        <CardBodyText>Tree Planting Initiatives</CardBodyText>
+        <CardBodyText>
+          HomePage is a project that utilizes a users Coordinates, Google’s
+          Geolocation API, Mongoose, React.js, and Node.js to create a Full
+          Stack web application. When a user pings their location to HomePage
+          their current status is automatically updated to the “type” of place
+          associated with their coordinates.
+        </CardBodyText>
         <ProjectBtn>Read More</ProjectBtn>
       </ProjectCardContainer>
     );

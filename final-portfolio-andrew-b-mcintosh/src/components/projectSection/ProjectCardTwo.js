@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components/macro';
 import projectTwoImage from '../../media/projectTwoWithTerminal.png';
 import { media } from '../../styleUtils.js';
+import githubLogo from '../../media/githubLogo.png';
 
 const ProjectCardDiv = styled.div`
   display: flex;
@@ -70,15 +71,58 @@ const CardHeaderText = styled.p`
   `}
 `;
 
-const ProjectBtn = styled.button`
+const ProjectBtn = styled.div`
   justify-self: center;
   margin-bottom: 1rem;
+  text-align: center;
   align-self: center;
-  grid-column: 1/4;
+  ${'' /* grid-column: 1 / 3;
+  grid-row: 5; */}
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  background: #c1f7d5;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: #354463;
+`;
+const ProjectGithubBtn = styled.div`
+  justify-self: center;
+  display: flex;
+  margin-bottom: 1rem;
+  align-self: center;
+  ${'' /* grid-column: 3 / 4;
+  grid-row: 5; */}
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  background: #c1f7d5;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: #354463;
+`;
+
+const ButtonContainer = styled.div`
+  justify-content: space-around;
+  place-self: stretch;
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 1rem;
+  margin: 0;
+  padding: 1rem 0;
+  grid-column: 1 / 4;
   grid-row: 5;
-  background: palevioletred;
-  border: none;
-  color: white;
+`;
+
+const SocialIcon = styled.div`
+  background-image: ${props => `url(${props.background})`};
+  ${'' /* background-image: url(${icon}); */}
+  background-size: cover;
+  margin: auto auto auto 0.25rem;
+
+  width: 15px;
+  height: 15px;
 `;
 
 export class ProjectCardTwo extends Component {
@@ -98,7 +142,13 @@ export class ProjectCardTwo extends Component {
           not found within their saved places they are prompted to register the
           location and designate its “type” e.g. “school, work, Gym.” */}
         </CardBodyText>
-        <ProjectBtn>Read More</ProjectBtn>
+        <ButtonContainer>
+          <ProjectBtn>Link To Site</ProjectBtn>
+          <ProjectGithubBtn>
+            The Code
+            <SocialIcon background={githubLogo} />
+          </ProjectGithubBtn>
+        </ButtonContainer>
       </ProjectCardContainer>
     );
   }
