@@ -3,15 +3,20 @@ import styled from 'styled-components/macro';
 import { media } from '../../styleUtils.js';
 import githubLogo from '../../media/githubLogo.png';
 import projectTwoImage from '../../media/projectTwoWithTerminal.png';
+import homePage from '../../media/homePage.jpg';
 
 const ProjectsSectionContainer = styled.div`
   overflow: hidden;
   display: grid;
   grid-gap: 1.25rem;
-
+  grid-template-rows: ;
+    ${media.desktop`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  place-content: stretch;
+  `}
   ${media.tablet`
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 1rem;
   place-content: stretch;
   `}
@@ -19,45 +24,55 @@ const ProjectsSectionContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
   `}
+
 `;
 
 const SingleProjectContainer = styled.div`
-  ${'' /* text-align: center; */}
+  text-align: left;
   display: grid;
-  align-items: start;
+  ${'' /* align-items: center; */}
   grid-template-rows: auto auto auto auto;
   padding: 1.5rem 2rem;
   background-color: white;
   box-shadow: 5px 10px;
   ${media.tablet`
+  ${'' /* margin: auto; */}
+  margin: 3rem 0;
+  column-gap: 1rem;
   padding: .8rem 1rem;
+  grid-row: ${props => `${props.row}`};
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
   `}
   ${media.phone`
   margin-top: 7rem;
   `}
 `;
 const ProjectHeader = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   letter-spacing: 0;
   grid-row: 2;
   line-height: 2.25rem;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-
   margin: auto;
-  ${'' /* text-align: center; */}
   vertical-align: middle;
   ${media.tablet`
-   font-size: 1.25rem;
+  margin: 0;
+   font-size: 1.75rem;
+   text-align: left;
+  grid-column: 2;
+  grid-row: 1 / 2;
   `}
   ${media.phone`
-   text-align: center;
-    font-size: 1.8rem;
-
+   align-text: center;
+  font-size: 1.8rem;
   `}
 `;
 const ProjectBody = styled.p`
   font-size: 0.875rem;
+  letter-spacing: 0.25;
   grid-row: 3;;
   line-height: 2rem;
   font-family: 'Open Sans', sans-serif;
@@ -65,7 +80,12 @@ const ProjectBody = styled.p`
   margin: auto;
   ${'' /* text-align: center; */}
   ${media.tablet`
-   font-size: 1.25rem;
+  margin: -2rem 0 0 0 ;
+  text-align: left;
+    line-height: 1.5rem;
+   font-size: .875rem;
+   grid-column: 2;
+   grid-row: 2 / 4
   `}
     ${media.phone`
    text-align: center;
@@ -83,7 +103,11 @@ const ProjectImage = styled.div`
   box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.75);
 
   ${media.tablet`
-    margin: auto;
+    margin-top: -3rem;
+    height:12rem;
+    width:16rem;
+    grid-column: 1;
+    grid-row: 1 / 3;
   `}
   ${media.phone`
     margin-top: -7rem;
@@ -97,6 +121,11 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   grid-row: 4;
+  ${media.tablet`
+    padding-top: 1.2rem;
+    grid-column: 1;
+    grid-row: 3/4;
+  `}
 `;
 const ProjectGithubBtn = styled.div`
   justify-self: center;
@@ -136,7 +165,7 @@ export class Projects extends Component {
   render() {
     return (
       <ProjectsSectionContainer>
-        <SingleProjectContainer>
+        <SingleProjectContainer row={1}>
           <ProjectImage background={projectTwoImage} />
           <ProjectHeader>DesirePath</ProjectHeader>
           <ProjectBody>
@@ -154,8 +183,8 @@ export class Projects extends Component {
             </ProjectGithubBtn>
           </ButtonContainer>
         </SingleProjectContainer>
-        <SingleProjectContainer>
-          <ProjectImage background={projectTwoImage} />
+        <SingleProjectContainer row={2}>
+          <ProjectImage background={homePage} />
           <ProjectHeader>HomePage</ProjectHeader>
           <ProjectBody>
             HomePage is a project that utilizes a users Coordinates, Google’s
@@ -172,7 +201,7 @@ export class Projects extends Component {
             </ProjectGithubBtn>
           </ButtonContainer>
         </SingleProjectContainer>
-        <SingleProjectContainer>
+        <SingleProjectContainer row={3}>
           <ProjectImage background={projectTwoImage} />
           <ProjectHeader>PersistCS</ProjectHeader>
           <ProjectBody>

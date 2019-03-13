@@ -59,7 +59,6 @@ const SkillHeader = styled.p`
   font-weight: 700;
   color: white;
   margin: auto;
-  ${'' /* text-align: center; */}
   vertical-align: middle;
   ${media.tablet`
    font-size: 1.25rem;
@@ -71,7 +70,7 @@ const SkillHeader = styled.p`
 const SkillBody = styled.p`
   font-size: 0.875rem;
   letter-spacing: 0.25;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: white;

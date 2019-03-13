@@ -10,6 +10,9 @@ const BackgroundDiv = styled.div`
   margin: 0;
   padding: 0;
   background-color: #91b7bd;
+  ${media.tablet`
+    background-color: #354463;
+  `}
   ${media.phone`
     background-color: #354463;
   `}
@@ -17,31 +20,29 @@ const BackgroundDiv = styled.div`
 const ProjectSectionContainer = styled.div`
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  ${'' /* grid-template-columns: repeat(12, 1fr); */}
   grid-template-rows: auto auto auto;
   column-gap: 1.5rem;
   margin: 0 1.5rem;
   background-color: #354463;
+  ${media.tablet`
+    padding-top: 2rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      background-color: #354463;
+  `}
   ${media.phone`
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto auto auto auto auto;
       column-gap: 1rem;
-      margin: 0 1.5rem;
+      ${'' /* margin: 0 1.5rem; */}
       background-color: #354463;
-  `}
-  ${media.tablet`
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto auto auto auto auto;
-      column-gap: 1rem;
-      margin: 0 1.5rem;
-      background-color: #354463;
+      padding-bottom: 4rem;
   `}
 `;
 const ProjectsContainer = styled.div`
   overflow: hidden;
   display: grid;
   grid-gap: 1.25rem;
-  ${'' /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */}
   ${media.tablet`
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-column: 1 / 5;
@@ -49,6 +50,7 @@ const ProjectsContainer = styled.div`
   grid-gap: 1rem;
   place-content: stretch;
   justify-items: center;
+  padding: 4rem 2rem;
   `}
   ${media.phone`
   align-content: space-around;
@@ -71,27 +73,16 @@ const SummaryText = styled.div`
   text-align: center;
   vertical-align: middle;
   display: inline-block;
-  ${media.phone`
-    font-size: 1.25rem;
-    grid-column: 1 / 5;
-  `}
   ${media.tablet`
     font-size: 1.25rem;
     grid-column: 1 / 5;
   `}
+  ${media.phone`
+    font-size: 1.25rem;
+    grid-column: 1 / 5;
+  `}
 `;
-// const SingleProjectContainer = styled.div`
-//   padding: 1rem;
-//   display: grid;
-//   grid-template-row: 1fr 1fr 1fr;
-//   ${media.phone`
-//    padding: .8rem 0;
-//   `}
-//   ${media.tablet`
-//   grid-column: ${props => `${props.column}`};
-//   grid-row: ${props => `${props.row}`};
-//   `}
-// `;
+
 const TitleBox = styled.div`
   position: relative;
   place-self: center;
@@ -107,7 +98,7 @@ const TitleBox = styled.div`
   padding: 0.5rem 2rem;
   border-radius: ;
   z-index: 1;
-  ${media.phone`
+  ${media.tablet`
     font-size: 1.25rem;
     grid-column: 1 / 5;
   `}
