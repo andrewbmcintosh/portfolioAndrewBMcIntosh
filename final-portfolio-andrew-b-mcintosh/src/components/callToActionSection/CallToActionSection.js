@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/macro';
 import githubLogo from '../../media/githubLogo.png';
+import resume from '../../media/resume.png';
+import linkedin from '../../media/linkedin.png';
+
 import { media } from '../../styleUtils.js';
 
 const CallToActionSectionContainer = styled.div`
@@ -162,7 +165,7 @@ export class CallToActionSection extends Component {
                 Click here to download a copy of my resume
               </StyledA>
             </CallToActionBody>
-            <SocialIcon background={githubLogo} />
+            <SocialIcon background={resume} />
           </FirstCallCardDiv>
 
           <CallCardDiv>
@@ -176,7 +179,7 @@ export class CallToActionSection extends Component {
                 Click here so that we can connect on Linkedin.
               </StyledA>
             </CallToActionBody>
-            <SocialIcon background={githubLogo} />
+            <SocialIcon background={linkedin} />
           </CallCardDiv>
           <LastCallCardDiv>
             <CallToActionHeader>Github</CallToActionHeader>
