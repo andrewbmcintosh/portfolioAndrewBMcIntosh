@@ -8,10 +8,6 @@ const CallToActionSectionContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   background-color: #b1e1c9;
   ${'' /* height: 100%; */}
-  ${media.phone`
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  `}
 `;
 
 const CallToActionSummary = styled.h1`
@@ -26,25 +22,16 @@ const CallToActionSummary = styled.h1`
   ${'' /* text-align: center; */}
   vertical-align: middle;
   display: inline-block;
-  ${media.phone`
-    grid-column: 1;
-    font-size:1.5rem;
-    padding: 0;
-    text-align: center;
-  `}
 `;
-const CallToActionBtn = styled.a`
+const CallToActionBtn = styled.button`
   align-self: center;
-  margin-top: 2.5rem;
-  font-size: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
   height: 2rem;
-  padding: 0.5rem 1rem;
+
   background: palevioletred;
   border: none;
   color: white;
-  ${media.phone`
-    grid-column: 1;
-  `}
 `;
 
 const CallToActionHeader = styled.h1`
@@ -52,18 +39,12 @@ const CallToActionHeader = styled.h1`
   grid-column: 1;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  ${media.phone`
-    grid-column: 1;
-  `}
 `;
 const CallToActionBody = styled.p`
   font-size: 0.8rem;
   grid-column: 1;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  ${media.phone`
-    grid-column: 1;
-  `}
 `;
 
 const FirstCallCardDiv = styled.div`
@@ -78,10 +59,6 @@ const FirstCallCardDiv = styled.div`
   background-color: white;
   grid-column: 8/12;
   z-index: 1;
-  ${media.phone`
-    grid-column: 1;
-    margin-top:2rem;
-  `}
 `;
 
 const LastCallCardDiv = styled.div`
@@ -96,9 +73,6 @@ const LastCallCardDiv = styled.div`
   background-color: white;
   grid-column: 8/12;
   z-index: 1;
-  ${media.phone`
-    grid-column: 1;
-  `}
 `;
 const CallCardDiv = styled.div`
   padding: 2rem;
@@ -112,9 +86,6 @@ const CallCardDiv = styled.div`
   background-color: white;
   grid-column: 8/12;
   z-index: 1;
-  ${media.phone`
-    grid-column: 1;
-  `}
 `;
 
 const SocialIcon = styled.div`
@@ -123,12 +94,8 @@ const SocialIcon = styled.div`
   ${'' /* background-image: url(${icon}); */}
   background-size: cover;
   grid-column: 2;
-  width: 30px;
-  height: 30px;
-`;
-
-const StyledA = styled.a`
-  text-decoration: none;
+  width: 20px;
+  height: 20px;
 `;
 
 export class CallToActionSection extends Component {
@@ -139,73 +106,38 @@ export class CallToActionSection extends Component {
           <CallToActionSummary>
             I believe that my skills as a full stack web developer combined with
             my love of collaboration, sense of resiliency, and passion for
-            connecting people make me especially equipped to be a part of your
-            team.
-            <br />
-            <br />
-            <CallToActionBtn
-              href="https://www.keepandshare.com/doc8/20728/andrewbmcintoshresume-pdf-88k?da=y"
-              download
-            >
-              Download Resume
-            </CallToActionBtn>
+            connecting people make me <br />
+            <CallToActionBtn>Take Action</CallToActionBtn>
           </CallToActionSummary>
 
           <FirstCallCardDiv>
             <CallToActionHeader>Resume</CallToActionHeader>
             <CallToActionBody>
-              <StyledA
-                href="https://kvisit.com/Ow/-KEB/6YIGyfTey0A,1,Nzb0PMdieZsdluy_V-MVcGXtSFRA-fYQdQwSXFptZBI"
-                download
-                target="_blank"
-              >
-                Click here to download a copy of my resume
-              </StyledA>
+              Follow the Link to Download a copy of my resume
             </CallToActionBody>
             <SocialIcon background={githubLogo} />
           </FirstCallCardDiv>
-
           <CallCardDiv>
-            <CallToActionHeader>Linkedin</CallToActionHeader>
+            <CallToActionHeader>Resume</CallToActionHeader>
             <CallToActionBody>
-              <StyledA
-                href="https://www.linkedin.com/in/andrewbmcintosh/"
-                download
-                target="_blank"
-              >
-                Click here so that we can connect on Linkedin.
-              </StyledA>
+              Follow the Link to Download a copy of my resume
+            </CallToActionBody>
+            <SocialIcon background={githubLogo} />
+          </CallCardDiv>
+          <CallCardDiv>
+            <CallToActionHeader>Resume</CallToActionHeader>
+            <CallToActionBody>
+              Follow the Link to Download a copy of my resume
             </CallToActionBody>
             <SocialIcon background={githubLogo} />
           </CallCardDiv>
           <LastCallCardDiv>
-            <CallToActionHeader>Github</CallToActionHeader>
+            <CallToActionHeader>Resume</CallToActionHeader>
             <CallToActionBody>
-              <StyledA
-                href="https://github.com/andrewbmcintosh"
-                download
-                target="_blank"
-              >
-                CLick here to checkout other projects and what I'm working on
-                right now.
-              </StyledA>
+              Follow the Link to Download a copy of my resume
             </CallToActionBody>
             <SocialIcon background={githubLogo} />
           </LastCallCardDiv>
-          {/* <LastCallCardDiv>
-            <CallToActionHeader>
-              abmcintosh7
-              <br />
-              @gmail.com
-            </CallToActionHeader>
-            <CallToActionBody>
-              <StyledA href="mailto: abmcintosh7@gmail.com" target="_blank">
-                Lets continue the conversation! click here to send an email to
-                abmcintosh7@gmail.com
-              </StyledA>
-            </CallToActionBody>
-            <SocialIcon background={githubLogo} />
-          </LastCallCardDiv> */}
         </CallToActionSectionContainer>
       </React.Fragment>
     );

@@ -19,6 +19,7 @@ const LandingDiv = styled.div`
          background-color: #354463;
   `}
 `;
+
 const BackgroundDiv = styled.div`
   margin: 0;
   padding: 0;
