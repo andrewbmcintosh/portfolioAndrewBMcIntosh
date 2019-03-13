@@ -31,8 +31,8 @@ const LinksContainer = styled.div`
   flex-direction: column;
   place-self: center start;
   margin: 0;
-  padding: 1rem 0;
-  grid-column: 6 / 9;
+  padding: 1rem 0 1rem 0.7rem;
+  grid-column: 5 / 9;
   grid-row: 1;
 `;
 const StyledLinks = styled.div`
