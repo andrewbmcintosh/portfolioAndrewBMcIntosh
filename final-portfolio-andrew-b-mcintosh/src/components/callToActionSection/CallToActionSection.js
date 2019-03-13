@@ -147,8 +147,9 @@ export class CallToActionSection extends Component {
             <br />
             <br />
             <CallToActionBtn
-              href="https://www.keepandshare.com/doc8/20728/andrewbmcintoshresume-pdf-88k?da=y"
+              href="https://kvisit.com/Ow/-KEB/6YIGyfTey0A,1,Nzb0PMdieZsdluy_V-MVcGXtSFRA-fYQdQwSXFptZBI"
               download
+              target="_blank"
             >
               Download Resume
             </CallToActionBtn>
@@ -162,7 +163,7 @@ export class CallToActionSection extends Component {
                 download
                 target="_blank"
               >
-                Click here to download a copy of my resume
+                Click here to download a copy of my resume.
               </StyledA>
             </CallToActionBody>
             <SocialIcon background={resume} />
@@ -189,7 +190,7 @@ export class CallToActionSection extends Component {
                 download
                 target="_blank"
               >
-                CLick here to checkout other projects and what I'm working on
+                Click here to checkout other projects and what I'm working on
                 right now.
               </StyledA>
             </CallToActionBody>

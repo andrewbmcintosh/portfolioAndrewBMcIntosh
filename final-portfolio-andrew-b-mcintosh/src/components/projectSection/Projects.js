@@ -4,6 +4,7 @@ import { media } from '../../styleUtils.js';
 import githubLogo from '../../media/githubLogo.png';
 import projectTwoImage from '../../media/projectTwoWithTerminal.png';
 import homePage from '../../media/homePage.jpg';
+import thegame from '../../media/thegame.png';
 
 const ProjectsSectionContainer = styled.div`
   overflow: hidden;
@@ -203,11 +204,48 @@ const SocialIcon = styled.div`
   height: 15px;
 `;
 
+const StyledA = styled.a`
+  text-decoration: none;
+  color: #354463;
+`;
+
 export class Projects extends Component {
   render() {
     return (
       <ProjectsSectionContainer>
         <SingleProjectContainer row={1}>
+          <ProjectImage background={thegame} />
+          <ProjectHeader>TheGame</ProjectHeader>
+          <ProjectBody>
+            The game itself is played by dropping discs into a grid. The grid
+            has a width of seven discs and a height of seven discs. The
+            objective of the game is to get four of the same discs in a row.The
+            Technologies I learned to create the game are HTML5, CSS3,
+            Javascript, and Jquery.
+          </ProjectBody>
+          <ButtonContainer>
+            <ProjectBtn>
+              <StyledA
+                href="https://romantic-wiles-8ac9a1.netlify.com"
+                download
+                target="_blank"
+              >
+                Link To Site
+              </StyledA>
+            </ProjectBtn>
+            <ProjectGithubBtn>
+              <StyledA
+                href="https://github.com/andrewbmcintosh/theGame"
+                download
+                target="_blank"
+              >
+                The Code
+              </StyledA>
+              <SocialIcon background={githubLogo} />
+            </ProjectGithubBtn>
+          </ButtonContainer>
+        </SingleProjectContainer>
+        <SingleProjectContainer row={2}>
           <ProjectImage background={projectTwoImage} />
           <ProjectHeader>DesirePath</ProjectHeader>
           <ProjectBody>
@@ -218,14 +256,28 @@ export class Projects extends Component {
             suggestions.
           </ProjectBody>
           <ButtonContainer>
-            <ProjectBtn>Link To Site</ProjectBtn>
+            <ProjectBtn>
+              <StyledA
+                href="https://calm-cliffs-65114.herokuapp.com/"
+                download
+                target="_blank"
+              >
+                Link To Site
+              </StyledA>
+            </ProjectBtn>
             <ProjectGithubBtn>
-              The Code
+              <StyledA
+                href="https://github.com/andrewbmcintosh/desirePath"
+                download
+                target="_blank"
+              >
+                The Code
+              </StyledA>
               <SocialIcon background={githubLogo} />
             </ProjectGithubBtn>
           </ButtonContainer>
         </SingleProjectContainer>
-        <SingleProjectContainer row={2}>
+        <SingleProjectContainer row={3}>
           <ProjectImage background={homePage} />
           <ProjectHeader>HomePage</ProjectHeader>
           <ProjectBody>
@@ -236,27 +288,23 @@ export class Projects extends Component {
             associated with their coordinates.
           </ProjectBody>
           <ButtonContainer>
-            <ProjectBtn>Link To Site</ProjectBtn>
+            <ProjectBtn>
+              <StyledA
+                href="https://aqueous-badlands-36192.herokuapp.com/"
+                download
+                target="_blank"
+              >
+                Link To Site
+              </StyledA>
+            </ProjectBtn>
             <ProjectGithubBtn>
-              The Code
-              <SocialIcon background={githubLogo} />
-            </ProjectGithubBtn>
-          </ButtonContainer>
-        </SingleProjectContainer>
-        <SingleProjectContainer row={3}>
-          <ProjectImage background={projectTwoImage} />
-          <ProjectHeader>PersistCS</ProjectHeader>
-          <ProjectBody>
-            PersistCS is a solution that starts the process of tieing a Point of
-            Sales system to a program that parses emails that are automatically
-            sent to a system account. The data is then transformed to represent
-            average hours that a employee works and the average tip that a
-            employee gets per hour.
-          </ProjectBody>
-          <ButtonContainer>
-            <ProjectBtn>Link To Site</ProjectBtn>
-            <ProjectGithubBtn>
-              The Code
+              <StyledA
+                href="https://github.com/andrewbmcintosh/HomePage"
+                download
+                target="_blank"
+              >
+                The Code
+              </StyledA>
               <SocialIcon background={githubLogo} />
             </ProjectGithubBtn>
           </ButtonContainer>

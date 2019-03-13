@@ -102,7 +102,14 @@ const StyledButtonBackground = styled.div`
   border-radius: 3px;
   z-index: 0;
 `;
-
+const StyledA = styled.a`
+  text-decoration: none;
+  color: #212529;
+`;
+const StyledB = styled.a`
+  text-decoration: none;
+  color: #354463;
+`;
 export class TopNavBar extends Component {
   render() {
     return (
@@ -112,12 +119,28 @@ export class TopNavBar extends Component {
           <br /> McIntosh
         </StyledName>
         <LinksContainer>
-          <StyledLinks>About Me</StyledLinks>
-          <StyledLinks>Projects</StyledLinks>
-          <StyledLinks>Contact Me</StyledLinks>
+          <StyledLinks>
+            <StyledA href="mailto: abmcintosh7@gmail.com" target="_blank">
+              abmcintosh7@gmail.com
+            </StyledA>
+          </StyledLinks>
+          <StyledLinks>
+            <StyledA href="https://twitter.com/Andrew_McIntosh" target="_blank">
+              @Andrew_McIntosh
+            </StyledA>
+          </StyledLinks>
+          <StyledLinks>(470) 384-9795</StyledLinks>
         </LinksContainer>
-        <StyledButton>Contact Me</StyledButton>
-        <StyledButtonBackground>Contact Me</StyledButtonBackground>
+        <StyledButton>
+          <StyledB
+            href="https://kvisit.com/Ow/-KEB/6YIGyfTey0A,1,Nzb0PMdieZsdluy_V-MVcGXtSFRA-fYQdQwSXFptZBI"
+            download
+            target="_blank"
+          >
+            Check out my Resume
+          </StyledB>
+        </StyledButton>
+        <StyledButtonBackground>Check out my Resume</StyledButtonBackground>
       </StyledNavbar>
     );
   }

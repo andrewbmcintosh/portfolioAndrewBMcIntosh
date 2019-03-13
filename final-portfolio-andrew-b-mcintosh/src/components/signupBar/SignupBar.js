@@ -103,16 +103,26 @@ const PhoneText = styled.p`
    text-align: center;
   `}
 `;
+
+const StyledA = styled.a`
+  text-decoration: none;
+  color: white;
+`;
 export class SignupBar extends Component {
   render() {
     return (
       <SignupSection>
         {/* <SignupForm env={this.props.env} /> */}
         <EmailHeader>
-          Email<EmailText>abmcintosh7@gmail.com</EmailText>
+          Email
+          <EmailText>
+            <StyledA href="mailto: abmcintosh7@gmail.com" target="_blank">
+              abmcintosh7@gmail.com
+            </StyledA>
+          </EmailText>
         </EmailHeader>
         <PhoneHeader>
-          Phone<PhoneText>abmcintosh7@gmail.com</PhoneText>
+          Phone<PhoneText>(470) 384-9795</PhoneText>
         </PhoneHeader>
       </SignupSection>
     );
