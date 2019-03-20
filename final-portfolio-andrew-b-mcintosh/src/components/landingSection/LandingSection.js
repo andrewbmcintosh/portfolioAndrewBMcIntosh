@@ -4,6 +4,7 @@ import FloatingCard from './FloatingCard';
 import Skills from './Skills';
 import { media } from '../../styleUtils.js';
 import mobileJumbotronColorAdjusted from '../../media/mobileJumbotronColorAdjusted.jpg';
+import portfolioBannerSmall from '../../media/portfolioBannerSmall.jpeg';
 
 const LandingDiv = styled.div`
   display: grid;
@@ -37,6 +38,22 @@ const StyledJumbotron = styled.div`
   background-position: center;
   background-size: cover;
   align-items: center;
+    ${media.largeDesktop`
+    font-size: .85rem;
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
+    min-height: 40rem;
+    max-height: 40rem;
+    background-image: url(${portfolioBannerSmall});
+  `}
+  ${media.desktop`
+    font-size: .85rem;
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
+    min-height: 30rem;
+    max-height: 30rem;
+    background-image: url(${portfolioBannerSmall});
+  `}
   ${media.phone`
     font-size: .85rem;
     grid-column: 1 / 5;

@@ -8,6 +8,7 @@ import { media } from '../../styleUtils.js';
 
 const CallToActionSectionContainer = styled.div`
   display: grid;
+
   grid-template-columns: repeat(12, 1fr);
   background-color: #b1e1c9;
   ${'' /* height: 100%; */}
@@ -73,7 +74,7 @@ const FirstCallCardDiv = styled.div`
   padding: 2rem;
   margin-top: 5rem;
   margin-bottom: 1rem;
-  width: 100%;
+  ${'' /* width: 100%; */}
   display: grid;
   grid-template-columns: 1fr 5%;
   grid-column-gap: 1rem;
@@ -91,7 +92,7 @@ const LastCallCardDiv = styled.div`
   padding: 2rem;
   margin-top: 1rem;
   margin-bottom: 5rem;
-  width: 100%;
+  ${'' /* width: 100%; */}
   display: grid;
   grid-template-columns: 1fr 5%;
   grid-column-gap: 1rem;
@@ -107,7 +108,7 @@ const CallCardDiv = styled.div`
   padding: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  width: 100%;
+  ${'' /* width: 100%; */}
   display: grid;
   grid-template-columns: 1fr 5%;
   grid-column-gap: 1rem;
@@ -125,7 +126,7 @@ const SocialIcon = styled.div`
   background-image: ${props => `url(${props.background})`};
   ${'' /* background-image: url(${icon}); */}
   background-size: cover;
-  grid-column: 2;
+  grid-column: 1;
   width: 30px;
   height: 30px;
 `;

@@ -38,6 +38,11 @@ const SingleProjectContainer = styled.div`
   box-shadow: 5px 10px;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
+      ${media.largeDesktop`
+  grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: ;
+  `}
     ${media.desktop`
   grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -63,7 +68,7 @@ const ProjectHeader = styled.p`
   grid-row: 2;
   font-size: 1.75rem;
   letter-spacing: 0;
-  line-height: 2.25rem;
+  line-height: 2rem;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   text-align: left;
@@ -156,6 +161,9 @@ const ButtonContainer = styled.div`
   padding-top: 1.2rem;
   grid-column: 1;
   grid-row: 4 / 5;
+${media.largeDesktop`
+  padding-top:
+  `}
   ${media.tablet`
     padding-top: 1.2rem;
     grid-column: 1;
@@ -169,6 +177,7 @@ const ButtonContainer = styled.div`
 `;
 const ProjectGithubBtn = styled.div`
   justify-self: center;
+
   display: flex;
   margin-bottom: 1rem;
   align-self: center;
@@ -179,6 +188,10 @@ const ProjectGithubBtn = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 3px;
   color: #354463;
+  ${media.largeDesktop`
+    font-size:.875rem;
+    padding: 0.5rem ;
+  `}
   ${media.desktop`
     font-size:.875rem;
   `}
@@ -195,13 +208,39 @@ const ProjectBtn = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 3px;
   color: #354463;
+  ${media.largeDesktop`
+    font-size:.875rem;
+  `}
+  ${media.desktop`
+    font-size:.875rem;
+  `}
 `;
 const SocialIcon = styled.div`
   background-image: ${props => `url(${props.background})`};
   background-size: cover;
   margin: auto auto auto 0.25rem;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
+  ${media.largeDesktop`
+    font-size:.875rem;
+    width: 10px;
+  height: 1px;
+  `}
+  ${media.desktop`
+    font-size:.875rem;
+     width: 10px;
+  height: 10px;
+  `}
+  ${media.tablet`
+    font-size:.875rem;
+     width: 10px;
+  height: 10px;
+  `}
+  ${media.phone`
+    font-size:.875rem;
+     width: 10px;
+  height: 10px;
+  `}
 `;
 
 const StyledA = styled.a`
@@ -281,11 +320,11 @@ export class Projects extends Component {
           <ProjectImage background={homePage} />
           <ProjectHeader>HomePage</ProjectHeader>
           <ProjectBody>
-            HomePage is a project that utilizes a users Coordinates, Google’s
-            Geolocation API, Mongoose, React.js, and Node.js to create a Full
-            Stack web application. When a user pings their location to HomePage
-            their current status is automatically updated to the “type” of place
-            associated with their coordinates.
+            A full stack single page web application that serves as a solution
+            to users who are concerned with sharing their exact location at all
+            times. HomePage gives them a platform to “ping” their location,
+            which automatically updates their status based on the saved type for
+            that user’s location in the database.
           </ProjectBody>
           <ButtonContainer>
             <ProjectBtn>

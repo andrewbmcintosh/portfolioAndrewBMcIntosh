@@ -10,6 +10,12 @@ const BackgroundDiv = styled.div`
   margin: 0;
   padding: 0;
   background-color: #91b7bd;
+  ${media.largeDesktop`
+    background-color: #354463;
+  `}
+  ${media.desktop`
+    background-color: #354463;
+  `}
   ${media.tablet`
     background-color: #354463;
   `}
@@ -53,8 +59,12 @@ const ProjectsContainer = styled.div`
   grid-column: 2 / 12;
   grid-row: 3;
   justify-items: center;
+    ${media.largeDesktop`
+  ${'' /* grid-column: 1 / 13; */}
+  grid-row: 3;
+  justify-items: center;
+  `}
   ${media.desktop`
-  
   grid-column: 2 / 12;
   grid-row: 3;
   justify-items: center;

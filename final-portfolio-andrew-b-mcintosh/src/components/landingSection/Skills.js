@@ -107,64 +107,75 @@ export class Skills extends Component {
           <SkillImage background={javascript} />
           <SkillHeader>Javascript</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            Want to automate the work you do? Establish an e-commerce platform?
+            Or create a web page that utilizes machine learning to predict what
+            items people would like to view on your store? Javascript can do all
+            of that. Which is why it is one of my favorite tools
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={react} />
           <SkillHeader>React</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            React is a Javascript library for building user interfaces. It works
+            great for single-page or mobile applications and when combined with
+            state management tools can efficiently scale and become a powerhouse
+            for any front-end development.
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={nodeJs} />
           <SkillHeader>Node.js</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            Is a JavaScript runtime environment. This is one of the integral
+            pieces of creating a full stack application because it allows me to
+            create a backend application in JavaScript.
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={python} />
           <SkillHeader>Python</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            Python is a server side language that is used primarily on the
+            backend. Python is a great tool for a great tool for data analytics
+            and machine learning.
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={communication} />
           <SkillHeader>Communication</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            By leveraging my background in public speaking and teaching I am
+            able to communicate the value of any organization or project clearly
+            and effectively.
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={collaboration} />
           <SkillHeader>Collaboration</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            I believe that work is best done when many voices are heard.
+            Surrounding yourself with people that inspire you to be your best
+            and look at old concepts in new ways are some of the first-rate
+            outcomes of a team grounded in collaboration.
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={resiliency} />
           <SkillHeader>Resiliency</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            I have an adaptive ability to make sure that the work that I do is
+            always guided by the values and principles of the design.
           </SkillBody>
         </SingleSkillContainer>
         <SingleSkillContainer>
           <SkillImage background={research} />
           <SkillHeader>Research</SkillHeader>
           <SkillBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
-            scelerisque lectus.
+            I have endless curiosity that drives me to always want to know more.
+            In every project, I challenged myself to try new techniques and
+            study best practices. I am not satisfied with simply knowing the
+            bare minimum of a technique or topic.
           </SkillBody>
         </SingleSkillContainer>
       </SkillsSectionContainer>
